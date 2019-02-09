@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Michael Scott Photography</title>
+	<link rel="stylesheet" style="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
+	<link href="aos-master/dist/aos.css" rel="stylesheet">
+</head>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		var scrollLink = $('.scroll');
+
+		//Smooth Scroll
+		scrollLink.click(function(e){
+			e.preventDefault();
+			$('body,html').animate({
+				scrollTop: $(this.hash).offset().top
+			}, 1000);
+		});
+
+		//Active Link
+		$(window).scroll(function() {
+			var scrollbarLocation = $(this).scrollTop();
+
+			scrollLink.each(function(){
+
+				var sectionOffset = $(this.hash).offset().top - 20;
+
+				if (sectionOffset <= scrollbarLocation) 
+				{
+					$(this).parent().addClass('active');
+					$(this).parent().siblings().removeClass('active');
+				}
+			});
+		});
+
+	});
+</script>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a class = "nav-link scroll" href="#top">Home</a></li>
+      <li><a class="nav-link scroll" href="#about">About</a></li>
+      <li><a class="nav-link scroll" href="#portfolio">Portfolio</a></li>
+      <li><a class="nav-link scroll" href="#contact">Contact</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    	<li><a class="nav-link scroll" href="#">Michael Scott</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="header-pic" id="top">
+	<img src="img/mountain.jpg" alt="background-pic" width=100%>
+	<div class="header-text">Michael Scott Photography</div>
+</div>
+
+<div class="about-page" id="about" data-aos="fade-right">
+	<div class="about-box-container">
+		<div class="about-text">About Me</div>
+		<div class="about-text-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	</div>
+
+	<div class="about-img-container" data-aos="fade-left">
+		<img class="about-pic" src="img/river.jpg" alt="river" width=50%>
+	</div>
+</div>
+
+<div class="portfolio-page" id="portfolio" data-aos="fade-down">
+	<div class="portfolio-box-container">
+		<div class="portfolio-text">Portfolio</div>
+		<div class="portfolio-container">
+			<a href="img/bridge.jpg" data-lightbox="portfolio-gallary"><img id="pic" class="pic1" src="img/bridge.jpg" alt="bridge"></a>
+			<a href="img/road.jpg" data-lightbox="portfolio-gallary"><img id="pic" class="pic2" src="img/road.jpg" alt="road"></a>
+			<a href="img/deer.jpg" data-lightbox="portfolio-gallary"><img id="pic" class="pic3" src="img/deer.jpg" alt="deer"></a>
+			<a href="img/beachBridge.jpg" data-lightbox="portfolio-gallary"><img id="pic" class="pic1" src="img/beachBridge.jpg" alt="beach bridge"></a>
+			<a href="img/man.jpg" data-lightbox="portfolio-gallary"><img id="pic" class="pic2" src="img/man.jpg" alt="man"></a>
+			<a href="img/computer.jpg" data-lightbox="portfolio-gallary"><img id="pic" class="pic3" src="img/computer.jpg" alt="computer"></a>
+			<a href="img/purple.jpg" data-lightbox="portfolio-gallary"><img id="pic" class="pic1" src="img/purple.jpg" alt="purple mountain"></a>
+			<a href="img/dessert.jpg" data-lightbox="portfolio-gallary"><img id="pic" class="pic2" src="img/dessert.jpg" alt="dessert"></a>
+			<a href="img/concert.jpg" data-lightbox="portfolio-gallary"><img id="pic" class="pic3" src="img/concert.jpg" alt="concert"></a>
+		</div>
+	</div>
+</div>
+
+<div class="contact-page" id="contact">
+	<div class="contact-head">Contact Me</div>
+		<div class="contact-box-container">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-instagram"></a>
+			<h3 class="mail"><img class="mail-logo" src="img/mail.jpg" height=30px width=30px><a href="mailto:">msphotography@gmail.com</a></h3>
+		</div>
+</div>
+
+<footer class="footer">
+	<a href="#" class="footer-text">Michael Scott Photography</a>
+	<div class="footer-copy">
+		<p class="rights">© 2019 Michael Scott Photography. All Rights Reserved.</p>
+	</div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="lightbox2-master/dist/js/lightbox.js"></script>
+<script src="aos-master/dist/aos.js"></script>
+<script>AOS.init();</script>
+</body>
+</html>
