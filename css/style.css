@@ -230,6 +230,7 @@ body {
 	.navbar {
 		position: relative;
 		top: auto;
+		width: 100%;
 	}
 }
 		
