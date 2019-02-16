@@ -216,6 +216,7 @@ body {
 @media only screen and (max-width: 950px) {
 	.about-box-container {
 		width: auto;
+		padding-top: 40px;
 	}
 	
 	.about-pic {
