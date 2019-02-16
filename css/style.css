@@ -212,3 +212,14 @@ body {
 .rights {
 	color: white;
 }
+
+@media only screen and (max-width: 750px) {
+	.about-box-container {
+		width: 100%;
+	}
+	
+	.navbar {
+		position: relative;
+	}
+}
+		
